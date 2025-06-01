@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>E-commerce</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <nav class="menu">
+            <a href="#">Início</a>
+            <a href="#">Produtos</a>
+            <a href="#">Contato</a>
+            <a href="#">Sobre nós</a>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Pesquisar...">
+            <button id="search-btn">Buscar</button>
+        </div>
+        <button id="login-btn">Login</button>
+    </header>
+
+    <div id="login-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="close-popup">&times;</span>
+            <input type="text" id="email" placeholder="exemplo@gmail.com">
+            <input type="password" id="password" placeholder="Senha de 6 dígitos">
+            <button id="register-btn" disabled>Cadastrar</button>
+            <button id="login-submit-btn" disabled>Login</button>
+            <button id="recover-password-btn" disabled>Recuperar Senha</button>
+        </div>
+    </div>
+
+    <nav class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+            <div class="section">
+                <h3>Chuteira</h3>
+                <a href="#">Chuteira 1</a>
+                <a href="#">Chuteira 2</a>
+                <a href="#">Chuteira 3</a>
+            </div>
+            <div class="section">
+                <h3>Short</h3>
+                <a href="#">Short 1</a>
+                <a href="#">Short 2</a>
+                <a href="#">Short 3</a>
+            </div>
+            <div class="section">
+                <h3>Bola</h3>
+                <a href="#">Bola 1</a>
+                <a href="#">Bola 2</a>
+                <a href="#">Bola 3</a>
+            </div>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
