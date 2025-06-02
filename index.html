@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Chuteiras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <img src="chuteira.png" alt="Chuteira" class="logo">
+            <nav class="nav-menu">
+                <a href="index.html">Inicio</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Produtos <span class="arrow">></span></button>
+                    <div class="dropdown-content">
+                        <div class="nested-dropdown">
+                            <button class="nested-btn">Chuteira <span>></span></button>
+                            <div class="nested-content">
+                                <a href="index.html">Chuteira 1</a>
+                                <a href="index.html">Chuteira 2</a>
+                                <a href="index.html">Chuteira 3</a>
+                            </div>
+                        </div>
+                        <div class="nested-dropdown">
+                            <button class="nested-btn">Bola <span>></span></button>
+                            <div class="nested-content">
+                                <a href="index.html">Bola 1</a>
+                                <a href="index.html">Bola 2</a>
+                                <a href="index.html">Bola 3</a>
+                            </div>
+                        </div>
+                        <div class="nested-dropdown">
+                            <button class="nested-btn">Short <span >></span></button>
+                            <div class="nested-content">
+                                <a href="index.html">Short 1</a>
+                                <a href="index.html">Short 2</a>
+                                <a href="index.html">Short 3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">Contato</a>
+                <a href="#">Sobre nós</a>
+            </nav>
+        </div>
+        
+        <div class="search-bar">
+            <img src="lupa.png" alt="Pesquisar" class="search-icon">
+            <input type="text" placeholder="Pesquisar...">
+            <button class="search-button">Buscar</button>
+        </div>
+        
+        <button class="login-button" id="loginButton">Login</button>
+    </header>
+
+    <!-- Login Popup -->
+    <div class="login-popup" id="loginPopup">
+        <div class="login-content">
+            <span class="close-popup" id="closePopup">&times;</span>
+            <h2>Login</h2>
+            <div class="input-group">
+                <input type="email" id="emailInput" placeholder="exemplo@gmail.com">
+                <span class="error-message" id="emailError"></span>
+            </div>
+            <div class="input-group">
+                <input type="password" id="passwordInput" placeholder="Senha de 6 dígitos">
+                <span class="error-message" id="passwordError"></span>
+            </div>
+            <div class="login-actions">
+                <button id="registerButton" disabled>Cadastrar</button>
+                <button id="submitLogin" disabled>Login</button>
+                <button id="recoverButton" disabled>Recuperar Senha</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth-compat.js"></script>
+        <script>
+   
+            const firebaseConfig = {
+                apiKey: "AIzaSyAfFlXtWkhKpHinNUuE4-C1ZZn9FuafPSw",
+                authDomain: "futstore-c5a34.firebaseapp.com",
+                projectId: "futstore-c5a34",
+                storageBucket: "futstore-c5a34.firebasestorage.app",
+                messagingSenderId: "1022287597845",
+                appId: "1:1022287597845:web:219a30bede70ee8dfc191c",
+                measurementId: "G-K6MYJ6RYN2"
+            };
+    
+           
+           firebase.initializeApp(firebaseConfig);
+    
+            firebase.auth().signInWithEmailAndPassword("test@gmail.com", "123456").then(response => {
+                console.log('success', response)
+            }).catch(error => {
+                console.log('error', error)
+            });
+    
+        </script>
+</body>
+</html>
